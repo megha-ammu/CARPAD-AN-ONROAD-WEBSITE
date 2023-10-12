@@ -1,0 +1,120 @@
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<form action="" method="POST">
+    <input type="hidden" name="uid" value="{{u.id}}">
+    <input type="hidden" name="pid" value="{{p.id}}">
+<h1><center>Book Now</center></h1>
+  <div class="container">
+    <label for="uname"><b>Name</b></label>
+    <input type="text" class="form-control" name="uname" readonly="" value="{{u.name}}"required>
+
+    <label for="psw"><b>Email</b></label>
+    <input type="text" class="form-control" name="uemail"readonly="" value="{{u.username}}" required>
+
+
+    <label for="psw"><b>Contact</b></label>
+    <input type="text" class="form-control" name="ucontact"readonly=""  value="{{u.contact}}"required>
+
+    <label for="psw"><b>Parking Location</b></label>
+    <input type="text"  class="form-control"name="location" readonly="" value="{{p.location}}"required>
+    <label for="psw"><b>Slot Address</b></label>
+    <textarea class="form-control" name="address"readonly=""  value="{{p.address}}"required>{{p.address}}</textarea><br>
+    <label for="psw"><b>Slot Type</b></label>
+    <input type="text" class="form-control" name="type"readonly=""  value="{{p.type}}"required>
+    <label for="psw"><b>Fee</b></label>
+    <input type="text" class="form-control" name="fee" readonly="" value="{{p.fee}}"required>
+    <label for="psw"><b>Vehicle Type</b></label>
+    <input type="text" class="form-control" name="vehicle" required>
+    <label for="psw"><b>Booking Date</b></label>
+    <input type="date" class="form-control" name="buk_date" required>
+    <label for="psw"><b>Arrival Time</b></label>
+    <input type="text"  class="form-control"name="from_time" pattern="[0-9]{2}[:]{1}[0-9]{2}[A-Z]{2}"placeholder="HH:MMAM/PM" required><br>
+    <label for="psw"><b>Departure Time</b></label>
+    <input type="text"  class="form-control"name="to_time" pattern="[0-9]{2}[:]{1}[0-9]{2}[A-Z]{2}"  placeholder="HH:MMAM/PM" required><br>
+
+    <button type="submit">Confirm Booking</button>
+    
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <a href="/user_view_slots" class="cancelbtn">Cancel</a>
+  
+  </div>
+</form>
+<style>
+    form {
+    border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+</style>

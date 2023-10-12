@@ -1,0 +1,76 @@
+{%extends 'p_layout.html'%}
+{%block content%}
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 ">
+		     <div class="list-group ">
+              <a href="#" class="list-group-item list-group-item-action active">Profile</a>
+              <a href="/edit_profile/{{current_user.id}}" class="list-group-item list-group-item-action">Edit Profile</a>
+              <a href="/vehicle_details/{{current_user.id}}" class="list-group-item list-group-item-action">Vehicle Details</a>
+              <a href="/upload_documents/{{current_user.id}}" class="list-group-item list-group-item-action">Upload Documents</a>
+              <a href="/all_documents/{{current_user.id}}" class="list-group-item list-group-item-action">My Documents</a>
+              <a href="/change_password/{{current_user.id}}" class="list-group-item list-group-item-action">Change Password</a>
+           
+      
+              
+            </div> 
+		</div>
+		<div class="col-md-9">
+		    <div class="card">
+		        <div class="card-body">
+		            <div class="row">
+		                <div class="col-md-12">
+		                    <h4>My Documents</h4>
+		                    <hr>
+		                </div>
+		            </div>
+		            <div class="row">
+		                <div class="col-md-12">
+                            <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+                            <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+                            <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+                            <!------ Include the above in your HEAD tag ---------->
+                            
+                            <br>
+                            
+                            <div class="container" style="
+                            width: 539px;
+                        ">
+                
+                        {%for i in d%}
+                   
+                            
+                                <div class="alert alert-info">
+                                    <a href="/delete_doc/{{i.id}}" class="btn btn-xs btn-danger pull-right">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="/download_doc/{{i.id}}" class="btn btn-xs btn-primary pull-right">DOWNLOAD</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="../static/uploads/{{i.filename}}" class="btn btn-xs btn-primary pull-right">VIEW</a>
+                                    <strong>{{i.filename}}</strong> 
+                                </div>
+                                {%endfor%}
+                           
+                               
+                               
+                               
+                               
+                             
+
+                         
+
+
+		                </div>
+		            </div>
+		            
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+
+
+
+{%endblock%}

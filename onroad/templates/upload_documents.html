@@ -1,0 +1,75 @@
+{%extends 'p_layout.html'%}
+{%block content%}
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 ">
+		     <div class="list-group ">
+              <a href="#" class="list-group-item list-group-item-action active">Profile</a>
+              <a href="/edit_profile/{{current_user.id}}" class="list-group-item list-group-item-action">Edit Profile</a>
+              <a href="/vehicle_details/{{current_user.id}}" class="list-group-item list-group-item-action">Vehicle Details</a>
+              <a href="/upload_documents/{{current_user.id}}" class="list-group-item list-group-item-action">Upload Documents</a>
+              <a href="/all_documents/{{current_user.id}}" class="list-group-item list-group-item-action">My Documents</a>
+              <a href="/change_password/{{current_user.id}}" class="list-group-item list-group-item-action">Change Password</a>
+           
+      
+              
+            </div> 
+		</div>
+		<div class="col-md-9">
+		    <div class="card">
+		        <div class="card-body">
+		            <div class="row">
+		                <div class="col-md-12">
+		                    <h4>Upload Documents</h4>
+		                    <hr>
+		                </div>
+		            </div>
+		            <div class="row">
+		                <div class="col-md-12">
+		                    <form method="POST" enctype="multipart/form-data">
+                          <!-- <input type="hidden"  value="{{d.id}}" name="uid">
+                              <div class="form-group row">
+                                <label for="username" class="col-4 col-form-label"> License*</label> 
+                                <div class="col-8">
+                                  <input id="username" name="license" placeholder="" class="form-control here" value=""required="required" type="file">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="name" class="col-4 col-form-label">Insurance</label> 
+                                <div class="col-8">
+                                  <input id="name" name="insurance"  value="" placeholder="" class="form-control here" type="file">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="lastname" class="col-4 col-form-label">Pollution</label> 
+                                <div class="col-8">
+                                  <input id="lastname"  name="pollution" placeholder="" value=""class="form-control here" type="file">
+                                </div>
+                               <br><br> -->
+                              <div class="form-group row">
+                                <div class="offset-4 col-8">
+                                  <a href="/upload_license/{{d.id}}"  class="btn btn-primary">Upload License</a>{{l.status}}<br><br>
+
+                                  <a href="/upload_insurance/{{d.id}}"  class="btn btn-primary">Upload Insurance</a>{{i.status}}<br><br>
+
+                                  <a href="/upload_pollution/{{d.id}}"  class="btn btn-primary">Upload Pollution</a>{{p.status}}<br><br>
+                                </div>
+                              </div>
+                            </form>
+		                </div>
+		            </div>
+		            
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+
+
+
+{%endblock%}

@@ -1,0 +1,46 @@
+{%extends 'p_layout.html'%}
+{%block content%}
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 ">
+		     <div class="list-group ">
+              <a href="#" class="list-group-item list-group-item-action active">Profile</a>
+              <a href="/edit_profile/{{current_user.id}}" class="list-group-item list-group-item-action">Edit Profile</a>
+              <a href="/vehicle_details/{{current_user.id}}" class="list-group-item list-group-item-action">Vehicle Details</a>
+              <a href="/upload_documents/{{current_user.id}}" class="list-group-item list-group-item-action">Upload Documents</a>
+              <a href="/all_documents/{{current_user.id}}" class="list-group-item list-group-item-action">My Documents</a> 
+			  <a href="/change_password/{{current_user.id}}" class="list-group-item list-group-item-action">Change Password</a>
+           
+      
+              
+            </div> 
+		</div>
+		<div class="col-md-9">
+		    <div class="card">
+		        <div class="card-body">
+		            <div class="row">
+		                <div class="col-md-12">
+                            <h3>Password Updated Successfully!</h3>
+		                    <hr>
+		                </div>
+		            </div>
+		            <div class="row">
+		                <div class="col-md-12">
+		  
+		                </div>
+		            </div>
+		            
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+
+
+
+{%endblock%}
